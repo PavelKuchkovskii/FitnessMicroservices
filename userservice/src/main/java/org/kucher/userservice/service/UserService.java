@@ -35,20 +35,6 @@ public class UserService {
         this.mapper = mapper;
         this.auditService = auditService;
         this.encoder = encoder;
-
-        User user = UserBuilder
-                .create()
-                .setUuid(UUID.randomUUID())
-                .setDtCreate(LocalDateTime.now())
-                .setDtUpdate(LocalDateTime.now())
-                .setMail("admin@gmail.com")
-                .setNick("Admin")
-                .setPassword(encoder.encode("123"))
-                .setRole(EUserRole.ADMIN)
-                .setStatus(EUserStatus.ACTIVATED)
-                .build();
-
-        dao.save(user);
     }
     @Transactional
     public UserDTO create(UserCreateDTO dto) {
