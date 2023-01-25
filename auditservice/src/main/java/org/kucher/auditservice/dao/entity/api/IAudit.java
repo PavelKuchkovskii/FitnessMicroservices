@@ -9,7 +9,7 @@ public interface IAudit {
 
     UUID getUuid();
     User getUser();
-    String text();
+    String getText();
     EEssenceType getType();
     String getId();
 }

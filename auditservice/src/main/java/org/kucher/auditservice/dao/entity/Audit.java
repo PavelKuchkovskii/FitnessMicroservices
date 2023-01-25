@@ -43,7 +43,7 @@ public class Audit implements IAudit {
     }
 
     @Override
-    public String text() {
+    public String getText() {
         return this.text;
     }
 
